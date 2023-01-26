@@ -2,9 +2,11 @@
   <IonPage>
     <IonHeader :translucent="true">
       <IonToolbar mode="md">
-        <IonTitle>Home</IonTitle>
-        <IonIcon :icon="i.heart" style="color: red" size="large"></IonIcon>
-        <!-- <IosHeartIcon w="60px" h="60px" animate="beat" /> -->
+        <IonTitle>
+          Home
+          <IonIcon :icon="i.heart" style="color: red" size="small"></IonIcon>
+          <IonIcon :icon="i.wifi" style="color: blue" size="small"></IonIcon>
+        </IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent class="ion-padding">
