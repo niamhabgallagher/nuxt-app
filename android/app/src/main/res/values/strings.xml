@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">nuxtapp</string>
+    <string name="title_activity_main">nuxtapp</string>
+    <string name="package_name">com.vtime.nuxtapp</string>
+    <string name="custom_url_scheme">com.vtime.nuxtapp</string>
+</resources>

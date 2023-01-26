@@ -1,0 +1,7 @@
+{
+  "name": "nuxtapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

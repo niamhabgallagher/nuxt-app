@@ -1,0 +1,6 @@
+{
+  "appId": "com.vtime.nuxtapp",
+  "appName": "nuxtapp",
+  "webDir": ".output/public",
+  "bundledWebRuntime": false
+}

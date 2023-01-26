@@ -1,0 +1,32 @@
+{
+  "name": "nuxtapp",
+  "version": "0.0.1",
+  "homepage": "",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run dev"
+  },
+  "devDependencies": {
+    "nuxt": "^3.1.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "4.6.2",
+    "@capacitor/app": "4.1.1",
+    "@capacitor/cli": "4.6.2",
+    "@capacitor/core": "4.6.2",
+    "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "4.6.2",
+    "@capacitor/keyboard": "4.1.1",
+    "@capacitor/status-bar": "4.1.1",
+    "@ionic/core": "^6.5.1",
+    "@ionic/vue": "^6.5.1",
+    "ionicons": "^6.1.1",
+    "vue-ionicons": "^3.0.5"
+  }
+}
