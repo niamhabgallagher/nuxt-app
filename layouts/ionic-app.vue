@@ -15,6 +15,9 @@
             <ion-item @click="router.push('/about')">
               <ion-label>About</ion-label>
             </ion-item>
+            <ion-item @click="router.push('/showModal')">
+              <ion-label>Modal</ion-label>
+            </ion-item>
           </ion-item-group>
         </ion-menu-toggle>
       </ion-content>
