@@ -1,30 +1,36 @@
 <template>
   <IonPage>
-    <IonHeader :translucent="true">
-      <IonToolbar mode="md">
-        <IonTitle>About</IonTitle>
-      </IonToolbar>
-    </IonHeader>
     <IonContent class="ion-padding">
       <h1>WELCOME ABOUT on IOS AND ANDROID</h1>
-      <IonButton @click="router.push('/')">
-        Go to Home Page
-      </IonButton>
     </IonContent>
   </IonPage>
 </template>
 
-<script setup>
+<script>
 import {
-  IonHeader,
+  heart,
+  wifi
+} from 'ionicons/icons'
+
+import {
   IonPage,
-  IonToolbar,
-  IonTitle,
   IonContent,
-  IonButton
+  IonIcon,
 } from '@ionic/vue';
 
-const router = useRouter();
+export default defineComponent({
+  data() {
+    return {
+      i: {
+        wifi,
+        heart
+      }
+    }
+  },
+  components: [
+    IonPage,
+    IonContent,
+    IonIcon
+  ]
+})
 </script>
-
-scrip
