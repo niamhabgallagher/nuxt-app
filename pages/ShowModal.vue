@@ -10,23 +10,18 @@
         <ion-icon :icon="listCircleOutline"></ion-icon>
       </ion-fab-button>
       <ion-fab-list side="top">
-        <!-- <ion-fab-button>
-          <ion-icon name="document"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-button>
-          <ion-icon name="color-palette"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-button>
-          <ion-icon name="globe"></ion-icon>
-        </ion-fab-button> -->
-        <ion-item>
-          <ion-label>Loading 1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Loading 2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Loading 3</ion-label>
+        <ion-item v-for="item in items" :key="item.num" style="width: 250px" lines="none">
+          <ion-card class="loading-card">
+            <ion-card-header>
+              <ion-card-title>
+                {{ item.title }}
+                <ion-icon @click="clickMe(item.num)" :icon="close" style="margin-left: 45px;"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-progress-bar :color="item.color" type="indeterminate"></ion-progress-bar>
+            </ion-card-content>
+          </ion-card>
         </ion-item>
       </ion-fab-list>
     </ion-fab>
@@ -42,10 +37,16 @@ import {
   IonFabButton,
   IonFabList,
   IonItem,
-  IonLabel
+  IonLabel,
+  IonCard,
+  IonCardContent,
+  IonProgressBar,
+  IonIcon,
+  IonCardHeader,
+  IonCardTitle,
 } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
-import { listCircleOutline } from 'ionicons/icons';
+import { listCircleOutline, close } from 'ionicons/icons';
 export default defineComponent({
   props: {
     timeout: { type: Number, default: 1000 },
@@ -58,7 +59,13 @@ export default defineComponent({
     IonFabButton,
     IonFabList,
     IonItem,
-    IonLabel
+    IonLabel,
+    IonCard,
+    IonCardContent,
+    IonProgressBar,
+    IonIcon,
+    IonCardHeader,
+    IonCardTitle,
   },
   setup() {
     const isOpenRef = ref(false);
@@ -68,8 +75,26 @@ export default defineComponent({
   },
   data() {
     return {
-      listCircleOutline
+      listCircleOutline,
+      close,
+      items: [
+        { title: 'Loading 1', num: 1, color: 'primary' },
+        { title: 'Loading 2', num: 2, color: 'secondary' },
+        { title: 'Loading 3', num: 3, color: 'tertiary' },
+        { title: 'Loading 4', num: 4, color: 'success' },
+      ]
     }
-  }
+  },
+  methods: {
+    clickMe(event: number) {
+      console.log('close', event);
+    }
+  },
 });
 </script>
+
+<style scoped>
+.loading-card {
+  width: 100% !important;
+}
+</style>
